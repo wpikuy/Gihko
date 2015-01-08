@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gihko", "Gihko\Gihko.csproj", "{1E10ED51-9DC0-4CD7-80B5-9B2E9AB34ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MascotMetroTabLibrary", "Gihko\MascotMetroTabLibrary\MascotMetroTabLibrary.csproj", "{915EE785-093D-4A8F-8C58-C90B1F8EB703}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E10ED51-9DC0-4CD7-80B5-9B2E9AB34ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E10ED51-9DC0-4CD7-80B5-9B2E9AB34ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E10ED51-9DC0-4CD7-80B5-9B2E9AB34ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E10ED51-9DC0-4CD7-80B5-9B2E9AB34ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{915EE785-093D-4A8F-8C58-C90B1F8EB703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915EE785-093D-4A8F-8C58-C90B1F8EB703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915EE785-093D-4A8F-8C58-C90B1F8EB703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915EE785-093D-4A8F-8C58-C90B1F8EB703}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,72 @@
+﻿<Window x:Class="Gihko.Presentation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ShowInTaskbar="False" Topmost="True"
+        Title="Presentation" Height="360" Width="480" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" ResizeMode="NoResize">
+    <Grid MouseEnter="mouseEnter" MouseLeave="mouseExit">
+        <Image Panel.ZIndex="1000" Width="128" Height="128" Name="Mascot" Source="img/still.png" Margin="176,162,176,70" MouseLeftButtonDown="dragMove">
+            <Image.ContextMenu>
+                <ContextMenu Background="#ffffffff" >
+                    <MenuItem Header="调教Gihko酱" Foreground="#FF973700" Click="openSettings"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="把Gihko酱扔回她的小窝" Foreground="#FF973700" Click="exit"/>
+                </ContextMenu>
+            </Image.ContextMenu>
+        </Image>
+        <Grid Name="Panel1" Width="130" Height="40" Margin="280,152,70,168" MouseEnter="buttonEnter" MouseLeave="buttonExit" MouseLeftButtonUp="buttonPress" Cursor="Hand">
+            <Image Source="img/Button.png"/>
+            <Label Name="Pl1" Foreground="#FF973700" Margin="38,8,0,5" FontSize="16" FontFamily="/Gihko;component/font/#创艺简细圆" HorizontalAlignment="Center" FontWeight="Bold">打开神社</Label>
+        </Grid>
+        <Grid Width="130" Height="40" Name="Panel2" Margin="304,213,46,107" MouseEnter="buttonEnter" MouseLeave="buttonExit" MouseLeftButtonUp="buttonPress" Cursor="Hand">
+            <Image Width="130" Height="40" Source="img/Button.png"/>
+            <Label Name="Pl2" Foreground="#FF973700" Margin="38,8,0,5" FontSize="16" FontFamily="/Gihko;component/font/#创艺简细圆" HorizontalAlignment="Center" FontWeight="Bold">打开神社</Label>
+        </Grid>
+        <Grid Width="130" Height="40" Name="Panel3" Margin="280,271,70,49" MouseEnter="buttonEnter" MouseLeave="buttonExit" MouseLeftButtonUp="buttonPress" Cursor="Hand">
+            <Image Width="130" Height="40" Source="img/Button.png"/>
+            <Label Name="Pl3" Foreground="#FF973700" Margin="38,8,0,5" FontSize="16" FontFamily="/Gihko;component/font/#创艺简细圆" HorizontalAlignment="Center" FontWeight="Bold">打开神社</Label>
+        </Grid>
+        <Grid Name="Panel6" Width="130" Height="40" Margin="70,152,280,168" MouseEnter="buttonEnter" MouseLeave="buttonExit" MouseLeftButtonUp="buttonPress" Cursor="Hand">
+            <Image Width="130" Height="40" Source="img/Button.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Label Name="Pl4" Foreground="#FF973700" Margin="0,8,38,5" FontSize="16" FontFamily="/Gihko;component/font/#创艺简细圆" HorizontalAlignment="Center" FontWeight="Bold">打开神社</Label>
+        </Grid>
+        <Grid Name="Panel5" Width="130" Height="40" Margin="46,213,304,107" MouseEnter="buttonEnter" MouseLeave="buttonExit" MouseLeftButtonUp="buttonPress" Cursor="Hand">
+            <Image Width="130" Height="40" Source="img/Button.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Label Name="Pl5" Foreground="#FF973700" Margin="0,8,38,5" FontSize="16" FontFamily="/Gihko;component/font/#创艺简细圆" HorizontalAlignment="Center" FontWeight="Bold">打开神社</Label>
+        </Grid>
+        <Grid Name="Panel4" Width="130" Height="40" Margin="70,271,280,49"  MouseEnter="buttonEnter" MouseLeave="buttonExit" MouseLeftButtonUp="buttonPress" Cursor="Hand">
+            <Image Width="130" Height="40" Source="img/Button.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Label Name="Pl6" Foreground="#FF973700" Margin="0,8,38,5" FontSize="16" FontFamily="/Gihko;component/font/#创艺简细圆" HorizontalAlignment="Center" FontWeight="Bold">打开神社</Label>
+        </Grid>
+        <Grid Name="Bubble" Width="324" Height="97" Margin="78,29,78,234">
+            <Image Name="BubbleImg" Source="img/bubble.png"></Image>
+            <TextBlock Name="BubbleText" TextWrapping="WrapWithOverflow" Text="JOJO我不做人啦！" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="/Gihko;component/font/#Droid Sans" Foreground="#FF973700" />
+        </Grid>
+    </Grid>
+</Window>

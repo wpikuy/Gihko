@@ -1,0 +1,244 @@
+﻿<Controls:MetroWindow xmlns:MascotMetroTabLibrary="clr-namespace:MascotMetroTabLibrary;assembly=MascotMetroTabLibrary"  x:Class="Gihko.Setting.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings" Height="500" Width="700"
+        EnableDWMDropShadow="True"
+        ResizeMode="NoResize" FontFamily="/Gihko;component/font/#Droid Sans" Icon="/Gihko;component/img/logo.ico" ShowIconOnTitleBar="False">
+    <Grid>
+        <Grid Margin="0,0,506,0">
+            <MascotMetroTabLibrary:LMTabController HoverColor="#ffc69d" PressedColor="#FFFB8633" Margin="0,52,0,63" FontFamily="/Gihko;component/font/#Droid Sans" FontSize="24">
+                <Grid>
+                    <MascotMetroTabLibrary:LMTabItem PageName="QuickFunc" Height="75" Margin="0,0,0,225">
+                        <Label Content="快速功能" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF973700"></Label>
+                    </MascotMetroTabLibrary:LMTabItem>
+                    <MascotMetroTabLibrary:LMTabItem PageName="Bubble" Height="75" Margin="0,103,0,178">
+                        <Label Content="提醒气泡" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF973700"></Label>
+                    </MascotMetroTabLibrary:LMTabItem>
+                    <MascotMetroTabLibrary:LMTabItem PageName="Reminder" Height="75" Margin="0,177,0,104">
+                        <Label Content="定时器" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF973700"></Label>
+                    </MascotMetroTabLibrary:LMTabItem>
+                    <MascotMetroTabLibrary:LMTabItem PageName="About" Height="75" Margin="0,251,0,30">
+                        <Label Content="关于" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF973700"></Label>
+                    </MascotMetroTabLibrary:LMTabItem>
+                </Grid>
+            </MascotMetroTabLibrary:LMTabController>
+        </Grid>
+        <Rectangle Width="1" Margin="193,0,506,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB9B9B9" Offset="0.313"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFB9B9B9" Offset="0.722"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Grid Margin="199,0,0,0">
+            <Grid Name="QuickFunc" Visibility="Visible" Background="White">
+                <TextBlock HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Height="65" TextWrapping="WrapWithOverflow" FontFamily="/Gihko;component/font/#Droid Sans" FontSize="22" Width="475">
+                    设置六个快捷按钮的功能，它们的编号由右上角的1号顺时针依次递增。
+                </TextBlock>
+                <Grid Margin="10,148,10,293" >
+                    <Label Content="编号" Margin="0,0,429,0" FontSize="16"/>
+                    <Label Content="功能" Margin="69,0,360,0" FontSize="16"/>
+                    <Label Content="名称" Margin="173,0,256,0" FontSize="16"/>
+                    <Label Content="地址" Margin="300,0,129,0" FontSize="16"/>
+                </Grid>
+                <Separator Margin="10,2,10,121" >
+                    <Separator.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FF9B9B9B" Offset="0.474"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Separator.Background>
+                </Separator>
+                <Grid Margin="10,184,10,257" VerticalAlignment="Center" Height="32">
+                    <Label Content="1" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <ComboBox Name="qf_cb1" Margin="50,0,338,4" Height="16" VerticalAlignment="Bottom" Background="White" SelectionChanged="qf_combobox_change">
+                        <ComboBoxItem>打开文件</ComboBoxItem>
+                        <ComboBoxItem>打开文件夹</ComboBoxItem>
+                        <ComboBoxItem>打开网页</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Name="qf_ntb1" HorizontalAlignment="Left" Height="23" Margin="152,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="97"  MaxLength="5"/>
+                    <TextBox Name="qf_tb1" HorizontalAlignment="Left" Height="23" Margin="254,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                    <Button Name="qf_b1" Height="26" Content="选择" HorizontalAlignment="Left" Margin="402,2,0,0" VerticalAlignment="Top" Width="63" FontSize="12" Foreground="Black" Click="qf_choose_click"/>
+                </Grid>
+                <Grid Margin="10,220,10,219" VerticalAlignment="Center" Height="32">
+                    <Label Content="2" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <ComboBox Name="qf_cb2" Margin="50,0,338,4" Height="16" VerticalAlignment="Bottom" Background="White" SelectionChanged="qf_combobox_change">
+                        <ComboBoxItem>打开文件</ComboBoxItem>
+                        <ComboBoxItem>打开文件夹</ComboBoxItem>
+                        <ComboBoxItem>打开网页</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Name="qf_ntb2" HorizontalAlignment="Left" Height="23" Margin="152,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="97" MaxLength="5"/>
+                    <TextBox Name="qf_tb2" HorizontalAlignment="Left" Height="23" Margin="254,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                    <Button Name="qf_b2" Height="26" Content="选择" HorizontalAlignment="Left" Margin="402,2,0,0" VerticalAlignment="Top" Width="63" FontSize="12" Foreground="Black" Click="qf_choose_click"/>
+                </Grid>
+                <Grid Margin="10,260,10,179" VerticalAlignment="Center" Height="32">
+                    <Label Content="3" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <ComboBox Name="qf_cb3" Margin="50,0,338,4" Height="16" VerticalAlignment="Bottom" Background="White" SelectionChanged="qf_combobox_change">
+                        <ComboBoxItem>打开文件</ComboBoxItem>
+                        <ComboBoxItem>打开文件夹</ComboBoxItem>
+                        <ComboBoxItem>打开网页</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Name="qf_ntb3" HorizontalAlignment="Left" Height="23" Margin="152,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="97" MaxLength="5"/>
+                    <TextBox Name="qf_tb3" HorizontalAlignment="Left" Height="23" Margin="254,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                    <Button Name="qf_b3" Height="26" Content="选择" HorizontalAlignment="Left" Margin="402,2,0,0" VerticalAlignment="Top" Width="63" FontSize="12" Foreground="Black" Click="qf_choose_click"/>
+                </Grid>
+                <Grid Margin="10,297,10,142" VerticalAlignment="Center" Height="32">
+                    <Label Content="4" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <ComboBox Name="qf_cb4" Margin="50,0,338,4" Height="16" VerticalAlignment="Bottom" Background="White" SelectionChanged="qf_combobox_change">
+                        <ComboBoxItem>打开文件</ComboBoxItem>
+                        <ComboBoxItem>打开文件夹</ComboBoxItem>
+                        <ComboBoxItem>打开网页</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Name="qf_ntb4" HorizontalAlignment="Left" Height="23" Margin="152,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="97" MaxLength="5"/>
+                    <TextBox Name="qf_tb4" HorizontalAlignment="Left" Height="23" Margin="254,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                    <Button Name="qf_b4" Height="26" Content="选择" HorizontalAlignment="Left" Margin="402,2,0,0" VerticalAlignment="Top" Width="63" FontSize="12" Foreground="Black" Click="qf_choose_click"/>
+                </Grid>
+                <Grid Margin="10,334,10,105" VerticalAlignment="Center" Height="32">
+                    <Label Content="5" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <ComboBox Name="qf_cb5" Margin="50,0,338,4" Height="16" VerticalAlignment="Bottom" Background="White" SelectionChanged="qf_combobox_change">
+                        <ComboBoxItem>打开文件</ComboBoxItem>
+                        <ComboBoxItem>打开文件夹</ComboBoxItem>
+                        <ComboBoxItem>打开网页</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Name="qf_ntb5" HorizontalAlignment="Left" Height="23" Margin="152,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="97" MaxLength="5"/>
+                    <TextBox Name="qf_tb5" HorizontalAlignment="Left" Height="23" Margin="254,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                    <Button Name="qf_b5" Height="26" Content="选择" HorizontalAlignment="Left" Margin="402,2,0,0" VerticalAlignment="Top" Width="63" FontSize="12" Foreground="Black" Click="qf_choose_click"/>
+                </Grid>
+                <Grid Margin="10,371,10,68" VerticalAlignment="Center" Height="32">
+                    <Label Content="6" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <ComboBox Name="qf_cb6" Margin="50,0,338,4" Height="16" VerticalAlignment="Bottom" Background="White" SelectionChanged="qf_combobox_change">
+                        <ComboBoxItem>打开文件</ComboBoxItem>
+                        <ComboBoxItem>打开文件夹</ComboBoxItem>
+                        <ComboBoxItem>打开网页</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Name="qf_ntb6" HorizontalAlignment="Left" Height="23" Margin="152,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="97" MaxLength="5"/>
+                    <TextBox Name="qf_tb6" HorizontalAlignment="Left" Height="23" Margin="254,2,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                    <Button Name="qf_b6" Height="26" Content="选择" HorizontalAlignment="Left" Margin="402,2,0,0" VerticalAlignment="Top" Width="63" FontSize="12" Foreground="Black" Click="qf_choose_click"/>
+                </Grid>
+            </Grid>
+            <Grid Name="Bubble" Visibility="Hidden" Background="White">
+                <Grid Margin="280,390,39,33">
+                    <Label Content="间隔时间（分钟）" FontFamily="Segoe UI, Lucida Sans Unicode, Verdana" Margin="0,12,79,11"></Label>
+                    <Controls:NumericUpDown Name="b_interval" Maximum="60" Minimum="1" Height="30" Margin="102,3,0,2" ></Controls:NumericUpDown>
+                </Grid>
+                <CheckBox Name="b_trial" Content="是否开启教程气泡" HorizontalAlignment="Left" Margin="69,93,0,0" VerticalAlignment="Top"/>
+                <CheckBox Name="b_tc" Content="是否开启吐槽气泡" HorizontalAlignment="Left" Margin="280,93,0,0" VerticalAlignment="Top" FontFamily="Segoe UI, Lucida Sans Unicode, Verdana"/>
+                <Separator Margin="10,2,10,228"></Separator>
+                <TextBlock Margin="54,141,52,294" Text="在下面填入吐槽内容，一行为一条吐槽。" FontSize="22" FontFamily="/Gihko;component/font/#Droid Sans" HorizontalAlignment="Center"></TextBlock>
+                <TextBox Name="b_tcs" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,192,39,86" HorizontalAlignment="Right" Width="431" FontSize="22" Block.LineHeight="3" FontFamily="/Gihko;component/font/#Droid Sans"></TextBox>
+            </Grid>
+            <Grid Name="Reminder" Visibility="Hidden" Background="White">
+                <TextBlock HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Height="65" TextWrapping="WrapWithOverflow" FontFamily="/Gihko;component/font/#Droid Sans" FontSize="22" Width="475">
+                    设置六个定时器，开启后到达指定时间即会以气泡形式显示描述内容。
+                </TextBlock>
+                <Grid Margin="10,148,10,293" >
+                    <Label Content="开启" Margin="21,0,408,0" FontSize="16"/>
+                    <Label Content="日期" Margin="83,0,346,0" FontSize="16"/>
+                    <Label Content="小时" Margin="185,0,244,0" FontSize="16"/>
+                    <Label Content="分钟" Margin="258,0,171,0" FontSize="16"/>
+                    <Label Content="描述" Margin="366,0,63,0" FontSize="16"/>
+                </Grid>
+                <Separator Margin="10,2,10,121" >
+                    <Separator.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FF9B9B9B" Offset="0.474"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Separator.Background>
+                </Separator>
+                <Grid Margin="10,186,10,253" VerticalAlignment="Center" Height="32">
+                    <Label Content="1" HorizontalAlignment="Left" Margin="10,-1,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <CheckBox Name="rm_en1" Margin="34,7,426,7" Height="18" Background="White" RenderTransformOrigin="-0.4,0.611"/>
+                    <DatePicker Name="rm_dp1" Margin="58,3,312,3" ></DatePicker>
+                    <Controls:NumericUpDown Name="rm_h1" Margin="175,3,238,3" Minimum="0" Maximum="23"></Controls:NumericUpDown>
+                    <Controls:NumericUpDown Name="rm_m1" Margin="249,3,164,3" Minimum="0" Maximum="59"></Controls:NumericUpDown>
+                    <TextBox Name="rm_tb1" HorizontalAlignment="Left" Height="23" Margin="322,3,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                </Grid>
+                <Grid Margin="10,223,10,216" VerticalAlignment="Center" Height="32">
+                    <Label Content="2" HorizontalAlignment="Left" Margin="10,-1,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <CheckBox Name="rm_en2" Margin="34,7,426,7" Height="18" Background="White" RenderTransformOrigin="-0.4,0.611"/>
+                    <DatePicker Name="rm_dp2" Margin="58,3,312,3"></DatePicker>
+                    <Controls:NumericUpDown Name="rm_h2" Margin="175,3,238,3" Minimum="0" Maximum="23"></Controls:NumericUpDown>
+                    <Controls:NumericUpDown Name="rm_m2" Margin="249,3,164,3" Minimum="0" Maximum="59"></Controls:NumericUpDown>
+                    <TextBox Name="rm_tb2" HorizontalAlignment="Left" Height="23" Margin="322,3,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                </Grid>
+                <Grid Margin="10,260,10,179" VerticalAlignment="Center" Height="32">
+                    <Label Content="3" HorizontalAlignment="Left" Margin="10,-1,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <CheckBox Name="rm_en3" Margin="34,7,426,7" Height="18" Background="White" RenderTransformOrigin="-0.4,0.611"/>
+                    <DatePicker Name="rm_dp3" Margin="58,3,312,3"></DatePicker>
+                    <Controls:NumericUpDown Name="rm_h3" Margin="175,3,238,3" Minimum="0" Maximum="23"></Controls:NumericUpDown>
+                    <Controls:NumericUpDown Name="rm_m3" Margin="249,3,164,3" Minimum="0" Maximum="59"></Controls:NumericUpDown>
+                    <TextBox Name="rm_tb3" HorizontalAlignment="Left" Height="23" Margin="322,3,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                </Grid>
+                <Grid Margin="10,297,10,142" VerticalAlignment="Center" Height="32">
+                    <Label Content="4" HorizontalAlignment="Left" Margin="10,-1,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <CheckBox Name="rm_en4" Margin="34,7,426,7" Height="18" Background="White" RenderTransformOrigin="-0.4,0.611"/>
+                    <DatePicker Name="rm_dp4" Margin="58,3,312,3"></DatePicker>
+                    <Controls:NumericUpDown Name="rm_h4" Margin="175,3,238,3" Minimum="0" Maximum="23"></Controls:NumericUpDown>
+                    <Controls:NumericUpDown Name="rm_m4" Margin="249,3,164,3" Minimum="0" Maximum="59"></Controls:NumericUpDown>
+                    <TextBox Name="rm_tb4" HorizontalAlignment="Left" Height="23" Margin="322,3,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                </Grid>
+                <Grid Margin="10,334,10,105" VerticalAlignment="Center" Height="32">
+                    <Label Content="5" HorizontalAlignment="Left" Margin="10,-1,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <CheckBox Name="rm_en5" Margin="34,7,426,7" Height="18" Background="White" RenderTransformOrigin="-0.4,0.611"/>
+                    <DatePicker Name="rm_dp5" Margin="58,3,312,3"></DatePicker>
+                    <Controls:NumericUpDown Name="rm_h5" Margin="175,3,238,3" Minimum="0" Maximum="23"></Controls:NumericUpDown>
+                    <Controls:NumericUpDown Name="rm_m5" Margin="249,3,164,3" Minimum="0" Maximum="59"></Controls:NumericUpDown>
+                    <TextBox Name="rm_tb5" HorizontalAlignment="Left" Height="23" Margin="322,3,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                </Grid>
+                <Grid Margin="10,371,10,68" VerticalAlignment="Center" Height="32">
+                    <Label Content="6" HorizontalAlignment="Left" Margin="10,-1,0,0" VerticalAlignment="Top" FontSize="20"/>
+                    <CheckBox Name="rm_en6" Margin="34,7,426,7" Height="18" Background="White" RenderTransformOrigin="-0.4,0.611"/>
+                    <DatePicker Name="rm_dp6" Margin="58,3,312,3"></DatePicker>
+                    <Controls:NumericUpDown Name="rm_h6" Margin="175,3,238,3" Minimum="0" Maximum="23"></Controls:NumericUpDown>
+                    <Controls:NumericUpDown Name="rm_m6" Margin="249,3,164,3" Minimum="0" Maximum="59"></Controls:NumericUpDown>
+                    <TextBox Name="rm_tb6" HorizontalAlignment="Left" Height="23" Margin="322,3,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="143"/>
+                </Grid>
+            </Grid>
+            <Grid Name="About" Visibility="Hidden" Background="White">
+                <Image Width="128" Height="128" Source="/Gihko;component/img/logo.png" Stretch="Fill" Margin="32,64,335,279"></Image>
+                <Label Content="Gihko 桌面精灵" Margin="196,113,10,316" FontSize="32"/>
+                <Separator Margin="10,197,10,246" >
+                    <Separator.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="-90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="#FF9B9B9B" Offset="0.474"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Separator.Background>
+                </Separator>
+                <Label Content="Presented by" Margin="32,230,174,205" FontSize="22" FontFamily="/Gihko;component/font/#创艺简细圆"/>
+                <Label Content="Crimson work - Roslairy" Margin="32,271,174,164" FontSize="22" FontFamily="/Gihko;component/font/#创艺简细圆"/>
+                <Label Content="Ver 0.1.0 build20150107" Margin="32,312,174,123" FontSize="22" FontFamily="/Gihko;component/font/#创艺简细圆"/>
+                <Label Content="© 2015 Crimson work. All rights reserved." Margin="32,353,10,82" FontSize="22" FontFamily="/Gihko;component/font/#创艺简细圆"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>
