@@ -36,7 +36,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Label Name="Pl4" Foreground="#FF973700" Margin="0,8,38,5" FontSize="16" FontFamily="/Gihko;component/font/#创艺简细圆" HorizontalAlignment="Center" FontWeight="Bold">打开神社</Label>
+            <Label Name="Pl6" Foreground="#FF973700" Margin="0,8,38,5" FontSize="16" FontFamily="/Gihko;component/font/#创艺简细圆" HorizontalAlignment="Center" FontWeight="Bold">打开神社</Label>
         </Grid>
         <Grid Name="Panel5" Width="130" Height="40" Margin="46,213,304,107" MouseEnter="buttonEnter" MouseLeave="buttonExit" MouseLeftButtonUp="buttonPress" Cursor="Hand">
             <Image Width="130" Height="40" Source="img/Button.png" RenderTransformOrigin="0.5,0.5">
@@ -62,9 +62,9 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Label Name="Pl6" Foreground="#FF973700" Margin="0,8,38,5" FontSize="16" FontFamily="/Gihko;component/font/#创艺简细圆" HorizontalAlignment="Center" FontWeight="Bold">打开神社</Label>
+            <Label Name="Pl4" Foreground="#FF973700" Margin="0,8,38,5" FontSize="16" FontFamily="/Gihko;component/font/#创艺简细圆" HorizontalAlignment="Center" FontWeight="Bold">打开神社</Label>
         </Grid>
-        <Grid Name="Bubble" Width="324" Height="97" Margin="78,29,78,234">
+        <Grid ZIndex="-10" Name="Bubble" Width="324" Height="97" Margin="78,29,78,234">
             <Image Name="BubbleImg" Source="img/bubble.png"></Image>
             <TextBlock Name="BubbleText" TextWrapping="WrapWithOverflow" Text="JOJO我不做人啦！" Margin="10,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="/Gihko;component/font/#Droid Sans" Foreground="#FF973700" />
         </Grid>

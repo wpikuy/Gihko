@@ -139,7 +139,7 @@ namespace Gihko {
         private void showButtons(){
             _buttonHelpIndex = 0;
             DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(0.03);
+            timer.Interval = TimeSpan.FromSeconds(0.1);
             timer.Tick += (sender, args) =>{
                 if (_buttonHelpIndex > 5){
                     timer.Stop();
@@ -184,7 +184,7 @@ namespace Gihko {
         private void hideButtons(){
             _buttonHelpIndex = 0;
             DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(0.06);
+            timer.Interval = TimeSpan.FromSeconds(0.1);
             timer.Tick += (sender, args) => {
                 if (_buttonHelpIndex > 5) {
                     timer.Stop();

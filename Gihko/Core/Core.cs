@@ -47,7 +47,9 @@ namespace Gihko.Core {
         private void initTray(){
             _notifyIcon = new NotifyIcon();
             _notifyIcon.Icon = Properties.Resources.logo;
-            _notifyIcon.MouseClick += (sender, args) => reposMascot();
+            _notifyIcon.DoubleClick += (sender, args) =>{
+                    reposMascot();
+            };
             _notifyIcon.ContextMenu = new ContextMenu(new []{
                 new MenuItem("调教Gihko酱", delegate {openSettings();}), 
                 new MenuItem("找回丢失的Gihko酱", delegate {reposMascot();}), 

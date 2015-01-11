@@ -32,7 +32,7 @@ namespace Gihko.Setting {
             Closing += (sender, args) => writeProps();
             _trialStrings = new[]{
                 "碰碰Gihko就可以打开快捷菜单哦~ o>w<o",
-                "如果找不到我了，在任务栏右边点一下Gihko的标志，Gihko就会出现了哦~ o>w<o",
+                "如果找不到我了，在任务栏右边双击Gihko的标志，Gihko就会出现了哦~ o>w<o",
                 "右键点Gihko，可以设置Gihko的功能哦~ o>w<o",
                 "使用时出现黑色窗口，是因为这个功能的地址填写错误，Gihko真的很对不起~ o>w<o",
                 "左键可以拖拽Gihko哦~ o>w<o"
